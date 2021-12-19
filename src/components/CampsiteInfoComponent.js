@@ -39,19 +39,18 @@ class CamspiteInfo extends Component{
         }
     }
 
-    render(){
-        if(this.props.campsite){
-            return(
-                <div class="row">
-                    {this.renderCampsite(this.props.campsite)}
-                    {this.renderComments(this.props.campsite.comments)}
+    render() {
+        if (this.props.campsite) {
+            return (
+                <div className="container">
+                    <div className="row">
+                        {this.renderCampsite(this.props.campsite)}
+                        {this.renderComments(this.props.campsite.comments)}
+                    </div>
                 </div>
             );
-        } else {
-            return(
-                <div></div>
-            );
         }
+        return <div />;
     }
 
 }
